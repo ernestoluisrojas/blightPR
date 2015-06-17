@@ -1,0 +1,6 @@
+
+*.pyc
+*.sqlite3
+*.csv
+local_settings.py
+functions/

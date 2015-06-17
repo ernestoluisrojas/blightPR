@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% load disqus_tags %}
+{% disqus_dev %}
+
+
+{% block title %}Detail{% endblock %}
+
+{% block body_block %}
+<div class="container">
+	<div class="row">
+		<br />
+		<div class="col-md-4">
+			<div>
+				<!--TODO: ver la foto default no reemplace la actual -->
+				<img src="/static/media/properties_images/{{ propiedad.catastro }}.jpg" alt="{{ propiedad.catastro }}" class="center-block img-responsive" height="100%" width="100%">
+				<!--<img src="http://placehold.it/1024x600" class="center-block img-responsive">-->
+			</div>
+		</div>
+	
+		<div class="col-md-4">
+			<h3 class="text-center">Property Details</h3>
+			<p> 
+				<b>Catastro:</b> {{ propiedad.catastro }} <br>
+				<b>Dueno:</b> {{ propiedad.dueno }} <br>
+				<b>Calle:</b> {{ propiedad.calle }} <br>
+				<b>Numero:</b> {{ propiedad.numero }} <br>
+				<b>Comunidad:</b> {{ propiedad.comunidad }} <br>
+				<b>Cabida:</b> {{ propiedad.cabida }} <br>
+				<b>Tenencia:</b> {{ propiedad.tenencia }} <br>
+				<b>Tipo:</b> {{ propiedad.tipo }} <br>
+				<b>Calificacion:</b> {{ propiedad.calificacion }} <br>
+				<b>Descripcion:</b> {{ propiedad.descripcion }} <br>
+				<b>Inundabilidad:</b> {{ propiedad.inundabilidad }} <br>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?center={{ propiedad.lat }},{{ propiedad.lng }}&zoom=17&size=600x600&maptype=hybrid&markers=color:blue%7Clabel:B%7C{{ propiedad.lat }},{{ propiedad.lng }}">
+		
+		</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Recommend</h3>
+			<!--TODO: anadir if statement de manera que corra una funcion para verificar si existe el post. de lo contratio crear uno.-->
+			{% disqus_show_comments propiedad.shortname %}
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

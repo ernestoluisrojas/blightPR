@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<!--plug-in for loading shapefiles-->
+<!--<script src="leaflet.shpfile.js"></script> <script src="shp.js"></script>-->
+<script src="{% static 'js/leaflet.shpfile.js' %}"></script>
+<script src="{% static 'js/shp.js' %}"></script>
+
+<style>
+html, body, #map {
+height: 100%;
+}
+body, .navbar {
+padding: 0;
+margin: 0;
+}
+</style>
+{% endblock %}
+
+{% block body_block %}
+<div id="map"></div>
+
+	<footer class="section section-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>San Juan - Abandoned Lots App</h3>
+                    <p>San Juan’s first attempt to recompile, consolidate,
+                    and publicly share data concerning San Juan’s
+                    list of abandoned lots under one straightforward
+                    and visually intuitive application.</p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="text-info text-right">
+                        <br>
+                        <br>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 hidden-xs text-right">
+                            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
