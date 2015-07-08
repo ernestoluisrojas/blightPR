@@ -2,7 +2,7 @@
 
 ## Synopsis:
 
-"San Juan - Abandoned Lots App" tries to recompile, consolidate, and publicly share data concerning San Juan’s list of abandoned lots under one straightforward and visually intuitive application.
+"San Juan - Abandoned Lots" app tries to recompile, consolidate, and publicly share data concerning San Juan’s list of abandoned lots under one straightforward and visually intuitive application.
 
 ## Packages:
 
