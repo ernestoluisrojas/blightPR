@@ -69,12 +69,10 @@ South==1.0.2
 	
 	~/blightPR $ python manage.py createsuperuser	
 
-## Contributors
+## Contributors:
 
-#Code4PR 
-Sasha Mendez
-Roger Reichard
-Ernesto L Rojas
+	Code4PR:
+	Sasha Mendez | Roger Reichard | Ernesto L Rojas
 
 ## License
 
