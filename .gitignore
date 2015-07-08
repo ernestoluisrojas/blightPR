@@ -1,5 +1,6 @@
 
 *.pyc
 *.sqlite3
-functions/
+*.csv
 local_settings.py
+functions/
