@@ -71,6 +71,10 @@ South==1.0.2
 
 ## Contributors
 
+#Code4PR 
+Sasha Mendez
+Roger Reichard
+Ernesto L Rojas
 
 ## License
 
