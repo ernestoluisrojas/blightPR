@@ -47,29 +47,27 @@ South==1.0.2
 	> cd blight_env
 	> .\Script\activate
 
-% install required packages:
-
-	$ pip install -r requirements.txt
-
 % clone Git directory:
 
 	$ git clone https://github.com/ernestoluisrojas/blightPR.git
+	
+% install required packages:
+
+	$ pip install -r requirements.txt
+	
+% update Disqus API key:
+
+	Modify ~/blightPR/blight_project/local_settings.py
+
+	DISQUS_API_KEY = '<YOUR DISQUS API KEY>'
 
 % setup database:
 
-	~/blight_project $ python manage.py makemigrations
+	~/blightPR $ python manage.py migrate
 	
-	~/blight_project $ python manage.py migrate
+	~/blightPR $ python populate_blight.py
 	
-	~/blight_project $ python populate_blight.py
-	
-	~/blight_project $ python manage.py createsuperuser	
-
-% update Disqus API key:
-
-	Modify blight_project>local_settings.py
-
-	DISQUS_API_KEY = '<YOUR DISQUS API KEY>'
+	~/blightPR $ python manage.py createsuperuser	
 
 ## Contributors
 
