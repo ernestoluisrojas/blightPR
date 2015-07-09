@@ -37,7 +37,7 @@ South==1.0.2
 % create a virtual environment:
 
 	For Linux:
-	$ source virtualenvwrapper
+	$ source virtualenvwrapper.sh
 	$ mkvirtualenv blight_env
 	$ workon blight_env
 
